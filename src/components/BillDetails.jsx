@@ -1,5 +1,5 @@
 // components/BillDetails.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const BillDetails = ({ onAddOtherDetails, onAddItem, onDeleteItem }) => {
 
@@ -59,6 +59,19 @@ const BillDetails = ({ onAddOtherDetails, onAddItem, onDeleteItem }) => {
 	const [discount, setDiscount] = useState(0);
 	const [gst, setGstPercentage] = useState('18%');
 	const [errorMessage, setErrorMessage] = useState('');
+
+
+	useEffect(() => {
+		const otherDetails = {
+			sellerDetails,
+			billingDetails,
+			shippingDetails,
+			orderDetails,
+			invoiceDetails,
+			reverseCharge
+		}
+		onAddOtherDetails(otherDetails)
+	}, [])
 
 
 	const handleDetails = (e) => {
@@ -394,7 +407,7 @@ const BillDetails = ({ onAddOtherDetails, onAddItem, onDeleteItem }) => {
 					setFormDisable(false)
 				}}>UpdateForm</button> : <button onClick={handleDetails}>Save Details</button>
 				}
-				
+
 			</div>
 			<div>
 				<h3>Enter Product details</h3>
