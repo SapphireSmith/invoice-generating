@@ -3,50 +3,48 @@ import React, { useEffect, useState } from 'react';
 
 const BillDetails = ({ onAddOtherDetails, onAddItem, onDeleteItem }) => {
 
-	// State variables for seller details
 	const [sellerDetails, setSellerDetails] = useState({
-		name: 'Bhumika Highstreet India Private Limited',
-		address: 'JL.No-95 & 8, Mouza-chandipur, Harinarayan chak, Amarabera, District-Howrah, West Bengal, uluberia, Howrah, West Bengal, India - 711316',
-		city: 'Howrah',
-		state: 'West Bengal',
-		pincode: '711316',
-		panNo: 'AAICB4842N',
-		gstRegistrationNo: '19AAICB4842N1Z5'
+		name: 'Dummy Seller Pvt Ltd',
+		address: '123 Fake Street, Fictitious Town, Imaginary City, Phantom State, 123456',
+		city: 'Imaginary City',
+		state: 'Phantom State',
+		pincode: '123456',
+		panNo: 'ABCDE1234F',
+		gstRegistrationNo: '12ABCDE1234F1Z5'
 	});
 
 	// State variables for billing details
 	const [billingDetails, setBillingDetails] = useState({
-		name: 'Rejani Devi',
-		address: 'Poomkoyickkal house, pandarathuruthu, KARUNAGAPPALLY',
-		city: 'KARUNAGAPPALLY',
-		state: 'Kerala',
-		pincode: '690518',
-		stateUtCode: '32' // Assuming State/UT Code as a number
+		name: 'John Doe',
+		address: '456 Another St, Somewhere, Nowhere, 654321',
+		city: 'Somewhere',
+		state: 'Nowhere',
+		pincode: '654321',
+		stateUtCode: '12' // Dummy State/UT Code
 	});
 
 	// State variables for shipping details
 	const [shippingDetails, setShippingDetails] = useState({
-		name: 'Rejani Devi',
-		address: 'Poomkoyickkal house, pandarathuruthu, KARUNAGAPPALLY',
-		city: 'KARUNAGAPPALLY',
-		state: 'Kerala',
-		pincode: '690518',
-		stateUtCode: '32' // Assuming State/UT Code as a number
+		name: 'Jane Doe',
+		address: '789 Someplace Ave, Elsewhere, Mythical Land, 987654',
+		city: 'Elsewhere',
+		state: 'Mythical Land',
+		pincode: '987654',
+		stateUtCode: '34' // Dummy State/UT Code
 	});
 
 	// State variables for order details
 	const [orderDetails, setOrderDetails] = useState({
-		orderNo: 'OD428827410283358100',
-		orderDate: '07-08-2023'
+		orderNo: 'ORD1234567890',
+		orderDate: '01-01-2023'
 	});
 
 	// State variables for invoice details
 	const [invoiceDetails, setInvoiceDetails] = useState({
-		invoiceNo: 'INV428827410283358100',
-		invoiceDetails: 'Goods sold as are intended for end user consumption and not for re-sale.',
-		invoiceDate: '07-08-2023'
+		invoiceNo: 'INV0987654321',
+		invoiceDetails: 'Goods sold are intended for end user consumption and not for re-sale.',
+		invoiceDate: '01-01-2023'
 	});
-
 	// State variable for reverse charge
 	const [reverseCharge, setReverseCharge] = useState(false); // Default to No
 
