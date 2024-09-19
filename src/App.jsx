@@ -141,7 +141,7 @@ function App() {
     // Add Return Policy
     pdf.setFontSize(8);
     pdf.text('Returns Policy:', 40, pdf.internal.pageSize.height - 100);
-    pdf.text(`At ${otherDetails.sellerDetails.name} we try to deliver perfectly each and every time. But in the off-chance that you need to return the item, please do so with the original Brand box/price tag, original packing and invoice without which it will be really difficult for us to act on your request. Please help us in helping you. Terms and conditions apply.`, 40, pdf.internal.pageSize.height - 85, { maxWidth: 500 });
+    pdf.text(`At ${otherDetails.sellerDetails.name} we will try to deliver perfectly each and every time. But in the off-chance that you need to return the item, please do so with the original Brand box/price tag, original packing and invoice without which it will be really difficult for us to act on your request. Please help us in helping you. Terms and conditions apply.`, 40, pdf.internal.pageSize.height - 85, { maxWidth: 500 });
 
     // Add signature
     pdf.text('Authorized Signatory', 400, pdf.internal.pageSize.height - 50);
